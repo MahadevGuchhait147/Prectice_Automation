@@ -1,9 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 
-// Load .env variables
+// Load environment variables from .env
 dotenv.config();
+
 export default defineConfig({
+
   // Test files location
   testDir: 'support/test',
 
@@ -13,20 +15,25 @@ export default defineConfig({
   // Retry failed tests only in CI
   retries: process.env.CI ? 2 : 0,
 
-  // HTML report
-  reporter: 'html',
+  // Terminal result + HTML report
+  reporter: [
+    ['list'],
+    ['html', { open: 'never' }],
+  ],
 
   // Common settings
   use: {
+
+    // Base URL from .env
     baseURL: process.env.BASE_URL,
 
-    // Take screenshot only when test fails
+    // Screenshot only when test fails
     screenshot: 'only-on-failure',
 
     // Record trace on first retry
     trace: 'on-first-retry',
 
-    // Run tests in browser
+    // Run browser in headless mode
     headless: true,
   },
 
