@@ -14,7 +14,7 @@ test.describe('Cart Page Tests', () => {
         await login.logInToApp(userEmail, userPassword);
     });
 
-    test.only('verify add product to cart', async ({ cart }) => {
+    test('verify add product to cart', async ({ cart }) => {
 
         // Cart button
         await cart.addToCart()
