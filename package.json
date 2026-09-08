@@ -1,0 +1,26 @@
+{
+  "name": "prectice_automation",
+  "version": "1.0.0",
+  "description": "for frame work demo",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahadevGuchhait147/Prectice_Automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MahadevGuchhait147/Prectice_Automation/issues"
+  },
+  "homepage": "https://github.com/MahadevGuchhait147/Prectice_Automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.5.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "dotenv": "^17.4.2"
+  }
+}
